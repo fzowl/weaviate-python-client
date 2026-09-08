@@ -1,6 +1,12 @@
 Changelog
 =========
 
+Unreleased
+----------
+This version includes:
+    - Update the VoyageAI by MongoDB model literals to the current offering: add ``voyage-4-nano``, ``voyage-code-4`` and ``voyage-context-4`` to ``text2vec-voyageai``, and ``rerank-3``, ``rerank-3-lite``, ``rerank-2.5`` and ``rerank-2.5-lite`` to ``reranker-voyageai`` (legacy identifiers retained for backwards compatibility)
+    - Rebrand user-facing VoyageAI references to ``VoyageAI by MongoDB``
+
 Version 4.23.1
 --------------
 This patch version includes:

@@ -253,7 +253,7 @@ class Rerankers(str, BaseEnum):
         COHERE: Weaviate module backed by Cohere reranking models.
         CONTEXTUALAI: Weaviate module backed by ContextualAI reranking models.
         TRANSFORMERS: Weaviate module backed by Transformers reranking models.
-        VOYAGEAI: Weaviate module backed by VoyageAI reranking models.
+        VOYAGEAI: Weaviate module backed by VoyageAI by MongoDB reranking models.
         JINAAI: Weaviate module backed by JinaAI reranking models.
         NVIDIA: Weaviate module backed by NVIDIA reranking models.
     """
@@ -688,7 +688,18 @@ class _RerankerJinaAIConfig(_RerankerProvider):
     model: Optional[Union[RerankerJinaAIModel, str]] = Field(default=None)
 
 
-RerankerVoyageAIModel = Literal["rerank-2", "rerank-2-lite", "rerank-lite-1", "rerank-1"]
+RerankerVoyageAIModel = Literal[
+    # Current models (see https://docs.voyageai.com/docs/reranker)
+    "rerank-3",
+    "rerank-3-lite",
+    "rerank-2.5",
+    "rerank-2.5-lite",
+    # Legacy models, kept for backwards compatibility
+    "rerank-2",
+    "rerank-2-lite",
+    "rerank-lite-1",
+    "rerank-1",
+]
 
 
 class _RerankerVoyageAIConfig(_RerankerProvider):
