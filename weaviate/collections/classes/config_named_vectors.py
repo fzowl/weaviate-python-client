@@ -1106,7 +1106,7 @@ class _NamedVectors:
         vector_index_config: Optional[VectorIndexConfigCreate] = None,
         vectorize_collection_name: bool = True,
     ) -> _NamedVectorConfigCreate:
-        """Create a named vector using the `text2vec-jinaai` model.
+        """Create a named vector using the `text2vec-voyageai` model.
 
         See the [documentation](https://weaviate.io/developers/weaviate/model-providers/voyageai/embeddings)
         for detailed usage.
