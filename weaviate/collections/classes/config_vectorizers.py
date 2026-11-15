@@ -47,11 +47,14 @@ VoyageModel: TypeAlias = Literal[
     "voyage-4",
     "voyage-4-lite",
     "voyage-4-large",
+    "voyage-code-4",
     "voyage-3.5",
     "voyage-3.5-lite",
     "voyage-3-large",
+    "voyage-code-3",
     "voyage-3",
     "voyage-3-lite",
+    "voyage-context-4",
     "voyage-context-3",
     "voyage-large-2",
     "voyage-code-2",
@@ -98,7 +101,7 @@ class Vectorizers(str, Enum):
         TEXT2VEC_PALM: Deprecated. Former name of `text2vec-google`, reported by collections that were created with it.
         TEXT2VEC_TRANSFORMERS: Weaviate module backed by Transformers text-based embedding models.
         TEXT2VEC_JINAAI: Weaviate module backed by Jina AI text-based embedding models.
-        TEXT2VEC_VOYAGEAI: Weaviate module backed by Voyage AI text-based embedding models.
+        TEXT2VEC_VOYAGEAI: Weaviate module backed by Voyage AI by MongoDB text-based embedding models.
         TEXT2VEC_NVIDIA: Weaviate module backed by NVIDIA text-based embedding models.
         TEXT2VEC_WEAVIATE: Weaviate module backed by Weaviate's self-hosted text-based embedding models.
         IMG2VEC_NEURAL: Weaviate module backed by a ResNet-50 neural network for images.
@@ -106,7 +109,7 @@ class Vectorizers(str, Enum):
         MULTI2VEC_GOOGLE: Weaviate module backed by a Google (and formerly PaLM) model for images and text.
         MULTI2VEC_PALM: Deprecated. Former name of `multi2vec-google`, reported by collections that were created with it.
         MULTI2VEC_BIND: Weaviate module backed by the ImageBind model for images, text, audio, depth, IMU, thermal, and video.
-        MULTI2VEC_VOYAGEAI: Weaviate module backed by a Voyage AI multimodal embedding models.
+        MULTI2VEC_VOYAGEAI: Weaviate module backed by Voyage AI by MongoDB multimodal embedding models.
         MULTI2VEC_NVIDIA: Weaviate module backed by NVIDIA multimodal embedding models.
         MULTI2VEC_TWELVELABS: Weaviate module backed by TwelveLabs multimodal embedding models.
         REF2VEC_CENTROID: Weaviate module backed by a centroid-based model that calculates an object's vectors from its referenced vectors.
